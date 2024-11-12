@@ -1,28 +1,33 @@
 Job Scraper
 
-A Python-based automation tool that scrapes job listings from specified websites, filters jobs based on education requirements, and sends email notifications for new job postings. This tool is designed to run on a daily schedule, either locally or via AWS Lambda.
+11.11.2024
+
+Prologue
+Hello! Thank you for taking the time to check out my project. For months, my homeland of Manipur, India has been in a state of turmoil. (https://www.nytimes.com/2024/09/11/world/asia/india-manipur-conflict.html) People have passed away, families have been misplaced from their homes, children are unable to attend school, and breadwinners cannot provide for their loved ones. This program was intended to help those affected by the violence by streamlining job listings that are curated for them based on level of education. 
+
+This is a Python-based automation tool that scrapes job listings from specified websites, filters jobs based on education requirements, and sends email notifications for new job postings. This tool is designed to run on a daily schedule, either locally or via AWS Lambda.
 
 ---
 
 Features
 
-- **Web Scraping**: Scrapes job postings from a predefined job listing website.
-- **Job Comparison**: Compares current job postings with previous ones to identify new postings.
-- **Job Filtering**: Uses OpenAI to filter jobs based on education requirements (college degree or not).
-- **Email Notifications**: Sends an email with the filtered job listings.
-- **Daily Scheduling**: The program can be scheduled to run daily using Python's scheduling libraries or AWS Lambda.
+- Web Scraping: Scrapes job postings from a predefined job listing website.
+- Job Comparison: Compares current job postings with previous ones to extracct only new postings.
+- Job Filtering: Uses OpenAI to filter jobs based on education requirements (college degree or not).
+- Email Notifications: Sends an email with the filtered job listings.
+- Daily Scheduling: The program can be scheduled to run daily using Python's scheduling libraries or AWS Lambda.
 
 ---
 
 Table of Contents
 
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Environment Variables](#environment-variables)
-- [Contributing](#contributing)
-- [License](#license)
+- Installation
+- Configuration
+- Usage
+- Project Structure
+- Environment Variables
+- Contributing
+- License
 
 ---
 
@@ -42,10 +47,10 @@ Configuration
 
 Create a .env file in the root directory to store sensitive information like your email credentials and OpenAI API key.
 Example .env file:
-TO_EMAIL=your_recipient_email@example.com
-FROM_EMAIL=your_sending_email@example.com
-EMAIL_PASSWORD=your_sending_email_password
-OPENAI_API_KEY=your_openai_api_key
+   TO_EMAIL=your_recipient_email@example.com
+   FROM_EMAIL=your_sending_email@example.com
+   EMAIL_PASSWORD=your_sending_email_password
+   OPENAI_API_KEY=your_openai_api_key
 
 Web Scraping Source:
 The program currently scrapes job listings from Sarkari Naukri. You can change the URL in scrape.py to scrape from a different site if needed.
@@ -69,16 +74,16 @@ AWS Lambda Scheduling: For serverless execution, deploy the program using AWS La
 Project Structure
 
 job-scraper-notifier/
-├── README.md                  # Project documentation
-├── .env                       # Environment variables (not included in the repository)
-├── requirements.txt           # Python dependencies
-├── src/                       # Source files
-│   ├── main.py                # Main program that runs the job scraper and notifier
-│   ├── emailer.py             # Sends email notifications using Gmail SMTP
-│   ├── compare.py             # Compares current job listings with previous ones
-│   ├── openai_filter.py       # Uses OpenAI to filter jobs based on education level
-│   ├── repeater.py            # Schedules job checking function
-│   └── scrape.py              # Web scraping logic to fetch job postings
+   ├── README.md                  # Project documentation
+   ├── .env                       # Environment variables (not included in the repository)
+   ├── requirements.txt           # Python dependencies
+   ├── src/                       # Source files
+   │   ├── main.py                # Main program that runs the job scraper and notifier
+   │   ├── emailer.py             # Sends email notifications using Gmail SMTP
+   │   ├── compare.py             # Compares current job listings with previous ones
+   │   ├── openai_filter.py       # Uses OpenAI to filter jobs based on education level
+   │   ├── repeater.py            # Schedules job checking function
+   │   └── scrape.py              # Web scraping logic to fetch job postings
 
 ---
 
@@ -88,3 +93,8 @@ OpenAI API Key:
 Sign up for an OpenAI account to get your API key if you haven’t already.
 Add OPENAI_API_KEY to your .env file to enable job filtering using OpenAI’s GPT model, and add money to your balance to enable usage. It is important to note that 
 
+---
+
+Licensing
+
+Look at license.txt
