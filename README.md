@@ -2,7 +2,7 @@ Job Scraper
 
 11.11.2024
 
-Prologue
+Prologue:
 Hello! Thank you for taking the time to check out my project. For months, my homeland of Manipur, India has been in a state of turmoil. (https://www.nytimes.com/2024/09/11/world/asia/india-manipur-conflict.html) People have passed away, families have been misplaced from their homes, children are unable to attend school, and breadwinners cannot provide for their loved ones. This program was intended to help those affected by the violence by streamlining job listings that are curated for them based on level of education. 
 
 This is a Python-based automation tool that scrapes job listings from specified websites, filters jobs based on education requirements, and sends email notifications for new job postings. This tool is designed to run on a daily schedule, either locally or via AWS Lambda.
