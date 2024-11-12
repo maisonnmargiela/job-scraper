@@ -1,0 +1,7 @@
+requests
+requests-html
+schedule
+openai
+python-dotenv
+smtplib
+beautifulsoup4
