@@ -1,3 +1,5 @@
+how to add: pip install _____
+
 requests
 requests-html
 schedule
